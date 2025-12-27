@@ -1,3 +1,76 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "coding-challenge",
+      "description": "Abstract image representing coding",
+      "imageUrl": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb2RlJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzY2ODE0NjY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "code abstract"
+    },
+    {
+      "id": "math-challenge",
+      "description": "Abstract image representing mathematics",
+      "imageUrl": "https://images.unsplash.com/photo-1623431846499-5327c0fb86a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXRoJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzY2ODU3OTYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "math abstract"
+    },
+    {
+      "id": "science-challenge",
+      "description": "Abstract image representing science",
+      "imageUrl": "https://images.unsplash.com/photo-1485368510545-b1f4bcd02d0d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzY2ODU3OTYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "science abstract"
+    },
+    {
+      "id": "business-challenge",
+      "description": "Abstract image representing business",
+      "imageUrl": "https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YnVzaW5lc3MlMjBtZWV0aW5nfGVufDB8fHx8MTc2Njc2MjkyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business meeting"
+    },
+    {
+      "id": "tournament-1",
+      "description": "Image for a coding tournament",
+      "imageUrl": "https://images.unsplash.com/photo-1759701547121-d5e4188e3d3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlc3BvcnRzJTIwY29tcGV0aXRpb258ZW58MHx8fHwxNzY2ODI1NDI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "esports competition"
+    },
+    {
+      "id": "tournament-2",
+      "description": "Image for a math tournament",
+      "imageUrl": "https://images.unsplash.com/photo-1697753178293-e3c0b6028817?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjaGVzcyUyMGNvbXBldGl0aW9ufGVufDB8fHx8MTc2Njg1Nzk2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chess competition"
+    },
+    {
+      "id": "certificate-react",
+      "description": "Certificate for React mastery",
+      "imageUrl": "https://images.unsplash.com/photo-1660795468951-0b37051eb1b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjZXJ0aWZpY2F0ZSUyMGF3YXJkfGVufDB8fHx8MTc2Njg1Nzk2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "certificate award"
+    },
+    {
+      "id": "certificate-algebra",
+      "description": "Certificate for Algebra mastery",
+      "imageUrl": "https://images.unsplash.com/photo-1658235081614-c47102fdd7a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjZXJ0aWZpY2F0ZSUyMGRpcGxvbWF8ZW58MHx8fHwxNzY2ODU3OTYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "certificate diploma"
+    },
+    {
+      "id": "user-avatar-1",
+      "description": "User avatar",
+      "imageUrl": "https://images.unsplash.com/photo-1590086782792-42dd2350140d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY3NTQyNTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "user-avatar-2",
+      "description": "User avatar",
+      "imageUrl": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NjgzNTE2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "user-avatar-3",
+      "description": "User avatar",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY3ODYzMDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "user-avatar-4",
+      "description": "User avatar",
+      "imageUrl": "https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc2Njc3MDcwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person smiling"
+    }
+  ]
 }
