@@ -44,7 +44,7 @@ const aiBossBattlePrompt = ai.definePrompt({
   name: 'aiBossBattlePrompt',
   input: {schema: AIBossBattleInputSchema},
   output: {schema: AIBossBattleOutputSchema},
-  prompt: `You are the AI mastermind designing a boss battle for the SkillShowdown game.
+  prompt: `You are the AI mastermind designing a boss battle for the SkillShowdown game. Your response must be in valid JSON format.
 
 The player is level {{{playerLevel}}} and is competing in the domain of {{{skillDomain}}}.
 
@@ -54,14 +54,13 @@ Here is the battle history of the player against this boss: {{{battleHistory}}}.
 
 Based on the player's skill domain and level, and the battle history, adapt the AI opponent's strategy and generate a challenging scenario description and challenge prompt. The AI strategy should be difficult but not unbeatable. 
 
-Output a JSON object including the scenario description, the AI opponent's strategy and a challenge prompt for the player. Make the output valid JSON. Focus on generating a scenario that tests the player's skills.
-
-{
-  "scenarioDescription": "Description of the battle scenario",
-  "aiOpponentStrategy": "Describe how the AI opponent adapts its strategy",
-  "challengePrompt": "Specific challenge for the player to solve"
-}
+Focus on generating a scenario that tests the player's skills.
 `,
+  config: {
+    response: {
+      format: 'json',
+    },
+  },
 });
 
 const aiBossBattleFlow = ai.defineFlow(

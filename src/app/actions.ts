@@ -5,6 +5,7 @@ import type { PersonalizedLearningPathOutput } from '@/ai/flows/ai-generated-lea
 import { aiBossBattle } from '@/ai/flows/ai-boss-battles';
 import type { AIBossBattleOutput } from '@/ai/flows/ai-boss-battles';
 import { z } from 'zod';
+import { challenges } from '@/lib/data';
 
 const learningPathSchema = z.object({
   learningGoal: z.string().min(5, { message: 'Please describe your learning goal in more detail.' }),
@@ -58,4 +59,40 @@ export async function getBossBattle(prevState: any, formData: FormData): Promise
     console.error(e);
     return { data: null, error: 'Failed to generate boss battle. Please try again.' };
   }
+}
+
+const answerSchema = z.object({
+  challengeId: z.string(),
+  answer: z.string(),
+});
+
+export async function submitAnswer(prevState: any, formData: FormData): Promise<{ correct: boolean, correctAnwer: string, xpGained: number } | { error: string }> {
+  const validatedFields = answerSchema.safeParse({
+    challengeId: formData.get('challengeId'),
+    answer: formData.get('answer'),
+  });
+
+  if (!validatedFields.success) {
+    return { error: 'Invalid submission.' };
+  }
+
+  const { challengeId, answer } = validatedFields.data;
+
+  const challenge = challenges.flatMap(c => c.challenges).find(ch => ch.id === challengeId);
+
+  if (!challenge) {
+    return { error: 'Challenge not found.' };
+  }
+
+  const isCorrect = challenge.correctAnswer === answer;
+  const xpGained = isCorrect ? challenge.xp : 0;
+  
+  // Here you would typically update the user's XP in a database
+  // For now, we'll just return the result.
+
+  return {
+    correct: isCorrect,
+    correctAnwer: challenge.correctAnswer,
+    xpGained,
+  };
 }

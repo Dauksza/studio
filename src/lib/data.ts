@@ -1,5 +1,5 @@
 import { Code, Calculator, FlaskConical, Briefcase } from 'lucide-react';
-import type { Discipline, DailyMission, LeaderboardUser, Tournament, Certificate } from './types';
+import type { Discipline, DailyMission, LeaderboardUser, Tournament, Certificate, ChallengeSet } from './types';
 import { PlaceHolderImages } from './placeholder-images';
 
 const findImage = (id: string) => PlaceHolderImages.find(img => img.id === id)?.imageUrl || '';
@@ -94,3 +94,42 @@ export const userProfile = {
   xpToNextLevel: 1000,
   currentStreak: 5,
 };
+
+export const challenges: ChallengeSet[] = [
+  {
+    disciplineId: 'coding',
+    disciplineName: 'Coding',
+    challenges: [
+      { id: 'C1', question: "What is the output of `console.log(typeof null)` in JavaScript?", options: ["'null'", "'object'", "'undefined'", "'symbol'"], correctAnswer: "'object'", xp: 10 },
+      { id: 'C2', question: "Which of the following is NOT a JavaScript data type?", options: ["Number", "String", "Boolean", "Float"], correctAnswer: "Float", xp: 10 },
+      { id: 'C3', question: "What does the `===` operator do?", options: ["Compares for equality without type coercion", "Assigns a value", "Compares for equality with type coercion", "Checks for object similarity"], correctAnswer: "Compares for equality without type coercion", xp: 20 },
+    ],
+  },
+  {
+    disciplineId: 'math',
+    disciplineName: 'Math',
+    challenges: [
+      { id: 'M1', question: "What is the value of Pi (to two decimal places)?", options: ["3.12", "3.14", "3.16", "3.18"], correctAnswer: "3.14", xp: 10 },
+      { id: 'M2', question: "What is the next number in the sequence: 1, 1, 2, 3, 5, 8, ...?", options: ["13", "11", "21", "15"], correctAnswer: "13", xp: 10 },
+      { id: 'M3', question: "What is the square root of 144?", options: ["10", "11", "12", "14"], correctAnswer: "12", xp: 20 },
+    ],
+  },
+    {
+    disciplineId: 'science',
+    disciplineName: 'Science',
+    challenges: [
+      { id: 'S1', question: "What is the chemical symbol for water?", options: ["H2O", "O2", "CO2", "NaCl"], correctAnswer: "H2O", xp: 10 },
+      { id: 'S2', question: "Which planet is known as the Red Planet?", options: ["Venus", "Mars", "Jupiter", "Saturn"], correctAnswer: "Mars", xp: 10 },
+      { id: 'S3', question: "What is the powerhouse of the cell?", options: ["Nucleus", "Ribosome", "Mitochondrion", "Chloroplast"], correctAnswer: "Mitochondrion", xp: 20 },
+    ],
+  },
+  {
+    disciplineId: 'business',
+    disciplineName: 'Business',
+    challenges: [
+      { id: 'B1', question: "What does SWOT stand for?", options: ["Strengths, Weaknesses, Opportunities, Threats", "Sales, Workforce, Operations, Technology", "Strategy, Work, Organization, Timing", "Service, Warranty, Output, Tasks"], correctAnswer: "Strengths, Weaknesses, Opportunities, Threats", xp: 10 },
+      { id: 'B2', question: "Which of these is a type of market structure?", options: ["Monopoly", "Duopoly", "Oligopoly", "All of the above"], correctAnswer: "All of the above", xp: 10 },
+      { id: 'B3', question: "What is ROI?", options: ["Return on Investment", "Rate of Inflation", "Risk of Insolvency", "Return on Initiative"], correctAnswer: "Return on Investment", xp: 20 },
+    ],
+  },
+];

@@ -67,16 +67,17 @@ const personalizedLearningPathPrompt = ai.definePrompt({
   name: 'personalizedLearningPathPrompt',
   input: {schema: PersonalizedLearningPathInputSchema},
   output: {schema: PersonalizedLearningPathOutputSchema},
-  prompt: `You are an expert learning path generator. Based on the players existing skills: {{{playerSkills}}}, and their performance data: {{{performanceData}}}, and their goal of: {{{learningGoal}}}, create a personalized learning path.
+  prompt: `You are an expert learning path generator. Your response must be in valid JSON format. 
+  
+  Based on the players existing skills: {{{playerSkills}}}, and their performance data: {{{performanceData}}}, and their goal of: {{{learningGoal}}}, create a personalized learning path.
 
     The learning path should be a step-by-step guide with specific topics, resources, and practice exercises. It should also estimate the time to complete the learning path and recommend relevant resources.
-
-    Here's an example of the desired format:
-
-    Learning Path: ["Topic 1", "Topic 2", "Topic 3", ...]
-    Estimated Completion Time: 2 weeks
-    Recommended Resources: ["Resource 1", "Resource 2", "Resource 3", ...]
     `,
+    config: {
+    response: {
+      format: 'json',
+    },
+  },
 });
 
 // Define the Genkit flow for generating personalized learning paths

@@ -1,7 +1,9 @@
 import type { LucideIcon } from 'lucide-react';
 
+export type DisciplineId = 'coding' | 'math' | 'science' | 'business';
+
 export type Discipline = {
-  id: 'coding' | 'math' | 'science' | 'business';
+  id: DisciplineId;
   name: string;
   description: string;
   icon: LucideIcon;
@@ -39,4 +41,18 @@ export type Certificate = {
   discipline: string;
   issueDate: Date;
   image: string;
+};
+
+export type Challenge = {
+  id: string;
+  question: string;
+  options: string[];
+  correctAnswer: string;
+  xp: number;
+};
+
+export type ChallengeSet = {
+  disciplineId: DisciplineId;
+  disciplineName: string;
+  challenges: Challenge[];
 };
